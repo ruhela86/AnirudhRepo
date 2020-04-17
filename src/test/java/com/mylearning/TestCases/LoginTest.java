@@ -61,6 +61,13 @@ public class LoginTest extends BaseClass{
 	}
 	
 	@Test(enabled = true)
+	public void checkbranch1() {
+		System.out.println("cadding code to branch 1");
+	}
+	
+	
+	
+	@Test(enabled = true)
 	public void testfail() {
 		Assert.assertEquals(true, false);
 	}
