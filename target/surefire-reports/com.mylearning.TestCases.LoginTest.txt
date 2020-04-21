@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.mylearning.TestCases.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 159.083 s <<< FAILURE! - in com.mylearning.TestCases.LoginTest
+testfail(com.mylearning.TestCases.LoginTest)  Time elapsed: 0.117 s  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at com.mylearning.TestCases.LoginTest.testfail(LoginTest.java:72)
+

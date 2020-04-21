@@ -10,6 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
@@ -94,9 +95,9 @@ public class Xls_Reader
 
 			if (cell == null)
 				return "";
-			if (cell.getCellType() == Cell.CELL_TYPE_STRING)
+			if (cell.getCellTypeEnum() == CellType.STRING)
 				return cell.getStringCellValue();
-			else if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC || cell.getCellType() == Cell.CELL_TYPE_FORMULA) {
+			else if (cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum() == CellType.FORMULA) {
 
 				String cellText = String.valueOf(cell.getNumericCellValue());
 				if (HSSFDateUtil.isCellDateFormatted(cell)) 
@@ -110,7 +111,7 @@ public class Xls_Reader
 				}
 				return cellText;
 			} 
-			else if (cell.getCellType() == Cell.CELL_TYPE_BLANK)
+			else if (cell.getCellTypeEnum() == CellType.BLANK)
 				return "";
 			else
 				return String.valueOf(cell.getBooleanCellValue());
@@ -143,9 +144,9 @@ public class Xls_Reader
 			if (cell == null)
 				return "";
 
-			if (cell.getCellType() == Cell.CELL_TYPE_STRING)
+			if (cell.getCellTypeEnum() == CellType.STRING)
 				return cell.getStringCellValue();
-			else if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC || cell.getCellType() == Cell.CELL_TYPE_FORMULA) {
+			else if (cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum() == CellType.FORMULA) {
 
 				String cellText = String.valueOf(cell.getNumericCellValue());
 				if (HSSFDateUtil.isCellDateFormatted(cell)) 
@@ -159,7 +160,7 @@ public class Xls_Reader
 				}
 				return cellText;
 			} 
-			else if (cell.getCellType() == Cell.CELL_TYPE_BLANK)
+			else if (cell.getCellTypeEnum() == CellType.BLANK)
 				return "";
 			else
 				return String.valueOf(cell.getBooleanCellValue());

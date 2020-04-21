@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [RegressionSuite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuite]">
   <listeners>
     <listener class-name="com.mylearning.utility.CustomListner"/>
   </listeners>
@@ -8,11 +8,9 @@
     <classes>
       <class name="com.mylearning.TestCases.LoginTest">
         <methods>
+          <include name="testfail"/>
           <include name="beforemethod"/>
-          <include name="ValidateLogo"/>
-          <include name="ValicadteWelcomeMsg"/>
           <include name="aftermethod"/>
-          <include name="validatelogin"/>
         </methods>
       </class> <!-- com.mylearning.TestCases.LoginTest -->
     </classes>
