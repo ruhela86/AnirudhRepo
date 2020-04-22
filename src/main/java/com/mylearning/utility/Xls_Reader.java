@@ -3,6 +3,7 @@ package com.mylearning.utility;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Calendar;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -124,7 +125,7 @@ public class Xls_Reader
 	}
 
 	//Returns the Data from a Cell.
-	public String getCellData(String sheetName, int colNum, int rowNum) 
+	public String getCellData(String sheetName, int colNum, int rowNum)  throws IOException 
 	{
 		try
 		{
