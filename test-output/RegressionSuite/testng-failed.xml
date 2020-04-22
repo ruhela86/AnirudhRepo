@@ -11,6 +11,7 @@
           <include name="testfail"/>
           <include name="beforemethod"/>
           <include name="aftermethod"/>
+          <include name="validatelogin"/>
         </methods>
       </class> <!-- com.mylearning.TestCases.LoginTest -->
     </classes>

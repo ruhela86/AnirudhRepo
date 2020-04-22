@@ -53,7 +53,7 @@ public class LoginTest extends BaseClass{
 	
 	
 	@Test(enabled = true)
-	public void validatelogin() {
+	public void validatelogin() throws IOException {
 	Home =log.login( Excel.getCellData("Sheet1", "userid", 2),  Excel.getCellData("Sheet1", "password", 2));
 	Assert.assertEquals(log.VerifyHomePage(),"CRMPRO" );
 		
