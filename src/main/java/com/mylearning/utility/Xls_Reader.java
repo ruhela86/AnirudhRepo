@@ -66,7 +66,7 @@ public class Xls_Reader
 	}
 	
 	//Returns the Data from a Cell.
-	public String getCellData(String sheetName, String colName, int rowNum)
+	public String getCellData(String sheetName, String colName, int rowNum) throws IOException
 	{
 		try 
 		{
@@ -444,7 +444,7 @@ public class Xls_Reader
 
 	//String sheetName, String testCaseName,String keyword ,String URL,String.
 	//Message.
-	public boolean addHyperLink(String sheetName, String screenShotColName, String testCaseName, int index, String url, String message) 
+	public boolean addHyperLink(String sheetName, String screenShotColName, String testCaseName, int index, String url, String message) throws IOException 
 	{
 		url = url.replace('\\', '/');
 		if (!isSheetExist(sheetName))
